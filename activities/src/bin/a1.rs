@@ -8,5 +8,10 @@
 // * Use a function to display your last name
 // * Use the println macro to display messages to the terminal
 
-fn main() {}
+fn first_name() ->&str {
+	return "Mitchell"
+}
+fn main() {
+	println!("Hello  first_name()")
+}
 
