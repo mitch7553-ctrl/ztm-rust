@@ -8,5 +8,15 @@
 // * Use a function to display the result
 // * Use the "{:?}" token in the println macro to display the result
 
-fn main() {}
+fn add(a: i32, b: i32) -> i32 {
+    a + b
+}
 
+fn result(a: i32, b: i32) {
+    println!("The sum of {:?} and {:?} is {:?}", a, b, add(a, b));
+}
+
+fn main() {
+    result(5, 10);
+    result(20, 30);
+}
