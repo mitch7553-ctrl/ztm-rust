@@ -5,9 +5,22 @@
 //   is > 5, < 5, or == 5, respectively
 //
 // Notes:
-// * Use a variable set to any integer value
-// * Use an if..else if..else block to determine which message to display
+
+
 // * Use the println macro to display messages to the terminal
 
-fn main() {}
+fn main() {
+// * Use a variable set to any integer value
+let x = 10;
+
+// * Use an if..else if..else block to determine which message to display
+if x < 5 {
+    println!("This is my message!");
+}
+else if x > 5 {
+    println!("This is another message.");
+} else {
+    println!("This is the else message.");
+}
+}
 
