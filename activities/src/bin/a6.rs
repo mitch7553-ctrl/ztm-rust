@@ -5,10 +5,20 @@
 //   in the terminal, then prints "done!" when complete.
 //
 // Notes:
-// * Use a mutable integer variable
-// * Use a while statement
-// * Print the variable within the while loop
-// * Do not use break to exit the loop
 
-fn main() {}
+
+
+
+fn main() {
+    // * Use a mutable integer variable
+    let mut y = 5;
+    // * Use a while statement
+    while y >= 1 {
+        
+    // * Print the variable within the while loop
+        println!("{:?}", y);
+        y = y - 1; 
+    }
+    println!("Done!");
+}
 
