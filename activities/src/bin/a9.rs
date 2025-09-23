@@ -13,7 +13,7 @@
 
 // * Use a function that returns a tuple
 fn data_management() -> (i32, i32) {
-    (1, 4)
+    (1, 5)
 }
 
 
@@ -22,13 +22,13 @@ fn main() {
     // * Destructure the return value into two variables
     let (x, y) = data_management();
     // * Use an if..else if..else block to determine what to print
-    if x >= 5 {
-        println!("{:?}, {:?}.", x, data);
-    } else if  y <= 5 {
-        println!("This is  not a number"
+    if x > 5 {
+        println!(">5");
+    } else if  y < 5 {
+        println!("<5");
     } 
     else {
-        println!( "{:?},  {:?}", y , data);
+        println!("=5");
     }
 }
 
