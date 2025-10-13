@@ -10,12 +10,6 @@
 // * Implement functionality on the box struct to create a new box
 // * Implement functionality on the box struct to print the characteristics
 
-
-
-
-
-
-
 // * Use a struct to encapsulate the box characteristics
 struct ShippingBox {
     color: Color,
@@ -29,13 +23,12 @@ struct Dimensions {
     depth: i32,
 }
 
-
 impl Dimensions {
-fn print(&self) {
-    println!("width: {:?}", self.width);
-    println!("height: {:?}", self.height);
-    println!("depth: {:?}",self.depth);
-}
+    fn print(&self) {
+        println!("width: {:?}", self.width);
+        println!("height: {:?}", self.height);
+        println!("depth: {:?}", self.depth);
+    }
 }
 // * Use an enum for the box color
 enum Color {
@@ -46,34 +39,30 @@ enum Color {
 
 impl Color {
     fn print(&self) {
-         match self {
+        match self {
             Color::Red => println!("red"),
             Color::Blue => println!("blue"),
-            Color::Brown => println!("brown")
-         }
+            Color::Brown => println!("brown"),
+        }
     }
 }
 // * Implement functionality on the box struct to create a new box
 impl ShippingBox {
-fn newBox(weight: f64, color: Color, dimensions: Dimensions) -> Self {
-   Self {
-    weight,
-    color,
-    dimensions,
-   }
+    fn newBox(weight: f64, color: Color, dimensions: Dimensions) -> Self {
+        Self {
+            weight,
+            color,
+            dimensions,
+        }
+    }
+
+    // * Implement functionality on the box struct to print the characteristics
+    fn print_box_type(&self) {
+        self.color.print();
+        self.dimensions.print();
+        println!("weight: {:?}", self.weight);
+    }
 }
-
-// * Implement functionality on the box struct to print the characteristics
-fn print_box_type(&self) {
-    self.color.print();
-    self.dimensions.print();
-    println!("weight: {:?}", self.weight);
-}
-
-
-}
-
-
 
 fn main() {
     let small_dimensions = Dimensions {
@@ -81,7 +70,6 @@ fn main() {
         height: 1,
         depth: 9,
     };
-    let small_box = ShippingBox::newBox(5.0,Color::Brown, small_dimensions);
+    let small_box = ShippingBox::newBox(5.0, Color::Brown, small_dimensions);
     small_box.print_box_type();
 }
-
