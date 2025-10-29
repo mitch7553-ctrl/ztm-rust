@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 // Topic: HashMap
 //
 // Requirements:
@@ -12,6 +13,13 @@
 //
 // Notes:
 // * Use a HashMap for the furniture store stock
+struct Store {
+    chairs: i32,
+    beds: i32,
+    tables: i32,
+}
+
+
 
 fn main() {}
 
