@@ -12,14 +12,23 @@ use std::collections::HashMap;
 // * Print the total number of items in stock
 //
 // Notes:
-// * Use a HashMap for the furniture store stock
-struct Store {
-    chairs: i32,
-    beds: i32,
-    tables: i32,
+
+fn main() {
+    // * Use a HashMap for the furniture store stock
+    let mut furniture_store: HashMap<&str, i32> = HashMap::new();
+    furniture_store.insert("Chairs", 5);
+    furniture_store.insert("Beds", 3);
+    furniture_store.insert("Tables", 2);
+    furniture_store.insert("Couches", 0);
+
+    let mut total_item = 0;
+    for (furniture, &count) in furniture_store.iter() {
+        if count == 0 {
+            println!("{}: out of stock", furniture);
+        } else {
+            println!("{}: {}", furniture, count);
+            total_item += count;
+        }
+        println!("Total items in stock: {}", total_item);
+    }
 }
-
-
-
-fn main() {}
-
